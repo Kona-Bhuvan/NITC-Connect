@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITCConnect Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side -->
+        <div class="left">
+            <div class="logo">
+                <span class="bold">NITC </span>Connect
+            </div>
+            <div class="center-image">
+                <img src="picture1.png" alt="NITC Image">
+            </div>
+            <div class="welcome">
+                Welcome Back!
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="right">
+            <form class="login-form" id="loginForm">
+                <h2>Log in</h2>
+                <div class="input-group">
+                    <input type="text" placeholder="Username" id="username">
+                </div>
+                <div class="input-group password-group">
+                    <input type="password" placeholder="Password" id="password">
+                    <span class="toggle-password">&#128065;</span>
+                </div>
+                <div class="login-options">
+                    <label>
+                        <input type="checkbox"> Remember Me
+                    </label>
+                    <a href="#" class="forgot">Forgot Password?</a>
+                </div>
+                <button type="submit" class="sign-in">Sign in</button>
+                <div class="divider"><span>Or</span></div>
+                <button type="button" class="sign-up" id="signUpBtn">Sign up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Redirect on Sign In
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // prevent actual form submission
+            window.location.href = 'home.html'; // redirect to home page
+        });
+
+        // Redirect on Sign Up
+        const signUpBtn = document.getElementById('signUpBtn');
+        signUpBtn.addEventListener('click', function() {
+            window.location.href = 'home.html'; // redirect to home page
+        });
+    </script>
+</body>
+</html>
